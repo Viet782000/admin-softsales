@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css"> -->
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+    <div class="page-layout fresh-ui">
+
+        <div class="ui-app-frame">
+            <header class="ui-app-frame__header">
+                <div class="ui-top-bar">
+                    <div class="ui-top-bar__branding">
+                        <a href="">
+                            <img src="./img/flogo.png" alt="softsales_logo_txt">
+                        </a>
+                    </div>
+                    <div class="ui-top-bar__list">
+                        <div class="ui-top-bar__item ui-app-frame__aside-opener">
+                            <div class="ui-app-frame__aside-opener">
+                                <button class="ui-button ui-button--transparent ui-button--icon-only" aria-controls="AppFrameAside" aria-label="Open navigation" type="button" name="button">
+                                    <img src="./img/flogo.png" alt="softsales_logo_txt">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="ui-top-bar__item ui-top-bar__item--fill">
+                            <div id="js-quick-search-mount" class="quick-search__container">
+                                <div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb; --p-frame-offset:0px;">
+                                    <section class="quick-search__box">
+                                        <div class="quick-search-overlay"></div>
+                                        <div class="next-input-wrapper quick-search__input-wrapper"><label class="next-label helper--visually-hidden" for="primary-nav-search-input">Search. Your results will appear below as you type.</label>
+                                            <div class="next-input--stylized"><span class="next-input__add-on next-input__add-on--before"><svg class="next-icon next-icon--size-16"><svg viewBox="0 0 20 20" class=""><use xlink:href="#next-search-reverse"></use></svg></svg></span>
+                                                <input type="search" autocomplete="search" name="primary-nav-search-input" id="primary-nav-search-input" placeholder="Search…" class="next-input next-input--search next-input--invisible"></div>
+                                        </div>
+                                        <div class="quick-search__endpoint-wrapper">
+                                            <div>
+                                                <section class="quick-search__instructions-banner"><span>Press <strong>enter</strong> to select, <strong>↑ ↓</strong> or <strong>tab</strong> to navigate, <strong>esc</strong> to dismiss</span></section>
+                                                <div class="quick-search__spinner ">
+                                                    <div class="next-spinner"><span><svg viewBox="0 0 20 20" class=""><use xlink:href="#next-spinner"></use></svg></span></div>
+                                                </div>
+                                                <section class="quick-search__results-wrapper">
+                                                    <section class="quick-search__results"></section>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div id="PolarisPortalsContainer"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-top-bar__item">
+                            <div class="ui-popover-switcher">
+                                <div class="ui-popover__container ui-popover__container--full-width-container">
+                                    <a class="ui-button ui-button--transparent" type="button" name="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                        <div class="ui-popover-switcher-button-interior">
+                                            <div class="ui-popover-switcher-button-avatar">
+                                                <div class="ui-avatar ui-avatar--style-3">
+                                                    <img class="ui-avatar__image" alt="" src="https://proxy.shopifycdn.com/59ae59a4e52a7bf426d2c1b1065bf653ad752fa663c79645ccf919de43283047/www.gravatar.com/avatar/89eba7bcdf5fd8ab450dd847828c31c2.jpg?default=blank&amp;size=80">
+                                                    <span class="ui-avatar__initials">Vi</span>
+                                                </div>
+                                            </div>
+                                            <div class="ui-popover-switcher-button-label">
+                                                <span class="ui-popover-switcher-button-label__heading">Viet Solution</span>
+                                                <span class="ui-popover-switcher-button-label__subheading">Trương Việt</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- subaccount -->
+                                    <div class="dropdown-menu subaccount ui-popover--full-height ui-popover--reduced-spacing">
+                                        <div class="ui-popover__content-wrapper">
+                                            <div class="ui-popover__content">
+                                                <div class="ui-popover__pane ui-popover__pane--fixed">
+                                                    <ul class="ui-popover-switcher__section">
+                                                        <li class="ui-popover-switcher-action">
+                                                            <a href="">
+                                                                <div class="ui-popover-switcher-item">
+                                                                    <div class="ui-popover-switcher-item-icon">
+                                                                        <svg class="next-icon next-icon--size-20 next-icon--no-nudge" aria-labelledby="next-add-circle-77ba57a68bdebe3bde97966ed1fbd7d4-title" role="img"><title id="next-add-circle-77ba57a68bdebe3bde97966ed1fbd7d4-title">Create new partner account</title> <use xlink:href="#next-add-circle"></use> </svg></div>
+                                                                    <div class="ui-popover-switcher-item-label"><span class="ui-popover-switcher-item-label__text">Create new partner account</span></div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ui-popover__pane ui-popover__pane--fixed">
+                                                    <ul class="ui-popover-switcher__section ui-popover-switcher__section--type-subdued">
+                                                        <li class="ui-popover-switcher-action">
+                                                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                                                <div class="ui-popover-switcher-item">
+                                                                    <div class="ui-popover-switcher-item-icon"><svg class="next-icon next-icon--size-20 next-icon--no-nudge" aria-labelledby="next-profile-133ac5116168c56d83329270383a5da3-title" role="img"><title id="next-profile-133ac5116168c56d83329270383a5da3-title">Your profile</title> <use xlink:href="#next-profile"></use> </svg></div>
+                                                                    <div class="ui-popover-switcher-item-label"><span class="ui-popover-switcher-item-label__text">Your profile</span></div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="ui-popover-switcher-action">
+                                                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                                                <div class="ui-popover-switcher-item">
+                                                                    <div class="ui-popover-switcher-item-icon"><svg class="next-icon next-icon--size-20 next-icon--no-nudge" aria-labelledby="next-support-331fb816659d22716e5074a1f7be884b-title" role="img"><title id="next-support-331fb816659d22716e5074a1f7be884b-title">Shopify Help Center</title> <use xlink:href="#next-support"></use> </svg></div>
+                                                                    <div class="ui-popover-switcher-item-label"><span class="ui-popover-switcher-item-label__text">Shopify Help Center</span></div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="ui-popover-switcher-action">
+                                                            <a href="#" data-method="post">
+                                                                <div class="ui-popover-switcher-item">
+                                                                    <div class="ui-popover-switcher-item-icon"><svg class="next-icon next-icon--size-20 next-icon--no-nudge" aria-labelledby="next-logout-4db106c85b23ebb0cdb7458ef4d4c36e-title" role="img"><title id="next-logout-4db106c85b23ebb0cdb7458ef4d4c36e-title">Log out</title> <use xlink:href="#next-logout"></use> </svg></div>
+                                                                    <div class="ui-popover-switcher-item-label"><span class="ui-popover-switcher-item-label__text">Log out</span></div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside id="AppFrameAside" class="ui-app-frame__aside">
+                <div class="ui-scrollable ui-scrollable--scroll-shadow">
+                    <div class="ui-scrollable__track" style="visibility: hidden;">
+                        <div class="ui-scrollable__scrollbar"></div>
+                    </div>
+                    <div class="ui-scrollable__scroll-content" style="padding: 0px 16px 16px 0px; margin: 0px -16px -16px 0px;">
+                        <div class="ui-scrollable__content" style="margin-bottom: -16px;">
+                            <div class="ui-scrollable__container">
+                                <nav class="ui-nav">
+                                    <ul class="ui-nav__group ui-nav__group--parent">
+                                        <li class="ui-nav__item ui-nav__item--parent">
+                                            <a href="#js-dashboard-app-1" class="ui-nav__link ui-nav__link--parent active-menu">
+                                                <i class="fa fa-user"></i>
+                                                <span class="ui-nav__label ui-nav__label--parent">Table</span>
+                                            </a>
+                                        </li>
+                                        <li class="ui-nav__item ui-nav__item--parent">
+                                            <a href="#js-dashboard-app-2" class="ui-nav__link ui-nav__link--parent">
+                                                <i class="fa fa-user"></i>
+                                                <span class="ui-nav__label ui-nav__label--parent">Form</span>
+                                            </a>
+                                        </li>
+                                        <li class="ui-nav__item ui-nav__item--parent">
+                                            <a href="#subumenu" class="ui-nav__link ui-nav__link--parent" data-toggle="collapse" aria-expanded="false">
+                                                <i class="fa fa-user"></i>
+                                                <span class="ui-nav__label ui-nav__label--parent">Apps</span>
+                                            </a>
+                                            <ul id="subumenu" class="collapse ui-rollup ui-nav__group ui-nav__group--child ui-rollup--show" data-rollup-mobile-only="true" data-rollup-disabled="true">
+                                                <li class="ui-nav__item ui-nav__item--child">
+                                                    <a href="#" class="ui-nav__link ui-nav__link--child"><span class="ui-nav__label ui-nav__label--child">All apps</span></a>
+                                                </li>
+                                                <li class="ui-nav__item ui-nav__item--child">
+                                                    <a href="#" class="ui-nav__link ui-nav__link--child">
+                                                        <span class="ui-nav__label ui-nav__label--child">App ads</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-app-frame__aside-closer"><button class="ui-button ui-button--transparent ui-button--icon-only" aria-controls="AppFrameAside" aria-label="Close navigation" type="button" name="button"><svg aria-hidden="true" focusable="false" class="next-icon next-icon--color-white next-icon--size-20"> <use xlink:href="#next-remove"></use> </svg></button></div>
+            </aside>
+            <main id="AppFrameMain" class="ui-app-frame__main">
+                <div id="js-dashboard-app-1">
+                    <div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb; --p-frame-offset:0px;">
+                        <div tabindex="-1" class="lrtNN">
+                            <div class="Polaris-Page_yisnh">
+                                <div class="Polaris-Page-Header_z4uwg Polaris-Page-Header--noBreadcrumbs_bdstf Polaris-Page-Header--mediumTitle_bfol6">
+                                    <div class="Polaris-Page-Header__MainContent_1rxfm">
+                                        <div class="Polaris-Page-Header__TitleActionMenuWrapper_1ltxs">
+                                            <div class="Polaris-Page-Header__TitleWrapper_bejfn">
+                                                <div>
+                                                    <div class="Polaris-Header-Title__TitleAndSubtitleWrapper_40sxf">
+                                                        <div class="Polaris-Header-Title_2qj8j">
+                                                            <h1 class="Polaris-DisplayText_1u0t8 Polaris-DisplayText--sizeLarge_61dxo"><span class="Polaris-TextStyle--variationStrong_rpyvj">Apps</span></h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-Page-Header__PrimaryActionWrapper_w8or9"><a data-polaris-unstyled="true" class="Polaris-Button_r99lw Polaris-Button--primary_7k9zs" href="#"><span class="Polaris-Button__Content_xd1mk"><span class="Polaris-Button__Text_yj3uv">Create app</span></span></a></div>
+                                    </div>
+                                </div>
+                                <div class="Polaris-Page__Content_xd1mk">
+                                    <div class="Polaris-Layout_sl20u">
+                                        <div class="Polaris-Layout__Section_1b1h1">
+                                            <div class="Polaris-Card_yis1o">
+                                                <div class="FGcQh">
+                                                    <div class="">
+                                                        <div class="Polaris-DataTable__Navigation_1ajsq"><button class="Polaris-Button_r99lw Polaris-Button--disabled_hcuh9 Polaris-Button--plain_2z97r Polaris-Button--iconOnly_viazp" aria-label="Scroll table left one column" type="button" disabled=""><span class="Polaris-Button__Content_xd1mk"><span class="Polaris-Button__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M12 16a.997.997 0 0 1-.707-.293l-5-5a.999.999 0 0 1 0-1.414l5-5a.999.999 0 1 1 1.414 1.414L8.414 10l4.293 4.293A.999.999 0 0 1 12 16z"></path></svg></span></span></span></button>
+                                                            <button class="Polaris-Button_r99lw Polaris-Button--plain_2z97r Polaris-Button--iconOnly_viazp" aria-label="Scroll table right one column" type="button"><span class="Polaris-Button__Content_xd1mk"><span class="Polaris-Button__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M8 16a.999.999 0 0 1-.707-1.707L11.586 10 7.293 5.707a.999.999 0 1 1 1.414-1.414l5 5a.999.999 0 0 1 0 1.414l-5 5A.997.997 0 0 1 8 16z"></path></svg></span></span>
+                                                                </span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="Polaris-DataTable_1pikz">
+                                                            <div class="Polaris-DataTable__ScrollContainer_lf5n1">
+                                                                <table class="Polaris-DataTable__Table_2qj3m">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--firstColumn_2o4gk Polaris-DataTable__Cell--header_sv8he" scope="col">App</th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he Polaris-DataTable__Cell--numeric_1ld9f" scope="col">Installs</th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he" scope="col">Listing status</th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he Polaris-DataTable__Cell--numeric_1ld9f" scope="col">Rating</th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he Polaris-DataTable__Cell--numeric_1ld9f" scope="col">Earnings</th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he" scope="col">
+                                                                                <div><button aria-describedby="DefinitionPopoverContent1" type="button" class="_794JH" tabindex="0" aria-controls="Polarispopover1" aria-owns="Polarispopover1" aria-expanded="false"><span class="s8MdL">API health</span></button></div>
+                                                                            </th>
+                                                                            <th data-polaris-header-cell="true" class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--header_sv8he" scope="col">
+                                                                                <div><button aria-describedby="DefinitionPopoverContent2" type="button" class="_794JH" tabindex="0" aria-controls="Polarispopover2" aria-owns="Polarispopover2" aria-expanded="false"><span class="s8MdL">Webhook deliveries</span></button></div>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="Polaris-DataTable__TableRow_1a85o">
+                                                                            <th class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--firstColumn_2o4gk" scope="row">
+                                                                                <div><a class="FeTD8" href="#">Viet</a><span class="Polaris-TextStyle--variationSubdued_1segu"><p>Custom app</p></span></div>
+                                                                            </th>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--numeric_1ld9f">
+                                                                                <p>0</p>
+                                                                            </td>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue"><span>-</span></td>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--numeric_1ld9f"><span class="Polaris-VisuallyHidden_yrtt5">No rating</span><span aria-hidden="true">-</span></td>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue Polaris-DataTable__Cell--numeric_1ld9f">
+                                                                                <p>-</p>
+                                                                            </td>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue">
+                                                                                <div class="pKGah"><span class="aUziU zjmrS"></span>
+                                                                                    <div><a data-polaris-unstyled="true" class="Polaris-Link_yj5sy" href="#">OK</a></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="Polaris-DataTable__Cell_yixs7 Polaris-DataTable__Cell--verticalAlignMiddle_mmoue"><a data-polaris-unstyled="true" class="Polaris-Link_yj5sy" href="#"><span aria-hidden="true">No deliveries</span></a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="PolarisPortalsContainer">
+                            <div data-portal-id="popover-Polarisportal1"></div>
+                            <div data-portal-id="popover-Polarisportal2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;"id="js-dashboard-app-2">
+                    <div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb; --p-frame-offset:0px;">
+                        <div tabindex="-1" class="lrtNN">
+                            <div class="Polaris-Page_yisnh">
+                                <main class="Polaris-Frame__Main_yj28s" id="AppFrameMain" data-has-global-ribbon="false">
+                                    <a id="AppFrameMainContent" tabindex="-1"></a>
+                                    <div class="Polaris-Frame__Content_xd1mk">
+                                        <div class="Polaris-Page_yisnh">
+                                            <div class="Polaris-Page-Header_z4uwg Polaris-Page-Header--isSingleRow_172ur Polaris-Page-Header--hasNavigation_gfpa8 Polaris-Page-Header--mediumTitle_bfol6">
+                                                <div class="Polaris-Page-Header__Navigation_1ajsq">
+                                                    <div class="Polaris-Page-Header__BreadcrumbWrapper_1tgwk">
+                                                        <nav role="navigation"><a class="Polaris-Breadcrumbs__Breadcrumb_llsun" href="#" data-polaris-unstyled="true"><span class="Polaris-Breadcrumbs__ContentWrapper_1yvfo"><span class="Polaris-Breadcrumbs__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M12 16a.997.997 0 0 1-.707-.293l-5-5a.999.999 0 0 1 0-1.414l5-5a.999.999 0 1 1 1.414 1.414L8.414 10l4.293 4.293A.999.999 0 0 1 12 16z"></path></svg></span></span><span class="Polaris-Breadcrumbs__Content_xd1mk">Stores</span></span></a></nav>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-Page-Header__MainContent_1rxfm">
+                                                    <div class="Polaris-Page-Header__TitleActionMenuWrapper_1ltxs">
+                                                        <div class="Polaris-Page-Header__TitleWrapper_bejfn">
+                                                            <div>
+                                                                <div class="Polaris-Header-Title__TitleAndSubtitleWrapper_40sxf">
+                                                                    <div class="Polaris-Header-Title_2qj8j">
+                                                                        <h1 class="Polaris-DisplayText_1u0t8 Polaris-DisplayText--sizeLarge_61dxo"><span class="Polaris-TextStyle--variationStrong_rpyvj">Add store</span></h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="Polaris-Page__Content_xd1mk">
+                                                <div class="Polaris-Layout_sl20u">
+                                                    <div style="width: 100%;"></div>
+                                                    <div class="Polaris-Layout__AnnotatedSection_1nyfl">
+                                                        <div class="Polaris-Layout__AnnotationWrapper_xpmgu">
+                                                            <div class="Polaris-Layout__Annotation_1a51c">
+                                                                <div class="Polaris-TextContainer_szg8b">
+                                                                    <h2 class="Polaris-Heading_1brcv">Store type</h2>
+                                                                    <div class="Polaris-Layout__AnnotationDescription_1fsez">
+                                                                        <div class="Polaris-TextContainer_szg8b">
+                                                                            <p>Each store type has unique limitations and features designed for its particular purpose. Pick a store type that best suits your needs.</p>
+                                                                            <p>You can test how customers pay for their orders using the <a target="_blank" class="Polaris-Link_yj5sy" href="https://help.shopify.com/manual/payments/shopify-payments/testing-shopify-payments?locale=en#test-mode"
+                                                                                    rel="noopener noreferrer" data-polaris-unstyled="true">Shopify Bogus Gateway or Shopify Payments test mode<span class="Polaris-Link__IconLockup_i2iua"><span class="Polaris-Link__IconLayout_1wnv2"><span class="Polaris-Icon_yj27d" aria-label="(opens a new window)"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M14 13v1a1 1 0 0 1-1 1H6c-.575 0-1-.484-1-1V7a1 1 0 0 1 1-1h1c1.037 0 1.04 1.5 0 1.5-.178.005-.353 0-.5 0v6h6V13c0-1 1.5-1 1.5 0zm-3.75-7.25A.75.75 0 0 1 11 5h4v4a.75.75 0 0 1-1.5 0V7.56l-3.22 3.22a.75.75 0 1 1-1.06-1.06l3.22-3.22H11a.75.75 0 0 1-.75-.75z"></path></svg></span></span></span></a>.</p>
+                                                                            <p>You can give staff members the ability to work on this store after it's been added.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Polaris-Layout__AnnotationContent_36su2">
+                                                                <div class="Polaris-Card_yis1o">
+                                                                    <div class="Polaris-Card__Section_1b1h1">
+                                                                        <fieldset class="Polaris-ChoiceList_ygfuw" id="PolarisChoiceList1" aria-invalid="false">
+                                                                            <legend class="Polaris-ChoiceList__Title_2qj8j">Pick a store type</legend>
+                                                                            <ul class="Polaris-ChoiceList__Choices_15o76">
+                                                                                <li>
+                                                                                    <div><label class="Polaris-Choice_j5gzq" for="PolarisRadioButton1"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-RadioButton_bsatr"><input id="PolarisRadioButton1" name="PolarisChoiceList1" type="radio" class="Polaris-RadioButton__Input_30ock" aria-describedby="PolarisRadioButton1HelpText" value="dev_store"><span class="Polaris-RadioButton__Backdrop_1x2i2"></span><span class="Polaris-RadioButton__Icon_yj27d"></span></span></span><span class="Polaris-Choice__Label_2vd36">Development store</span></label>
+                                                                                        <div class="Polaris-Choice__Descriptions_pp5ln">
+                                                                                            <div class="Polaris-Choice__HelpText_8qj1a" id="PolarisRadioButton1HelpText"><span>Test apps or themes you create, or set up and demo a store for a client. Transferring ownership to a client can give you a recurring revenue share.</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div><label class="Polaris-Choice_j5gzq" for="PolarisRadioButton2"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-RadioButton_bsatr"><input id="PolarisRadioButton2" name="PolarisChoiceList1" type="radio" class="Polaris-RadioButton__Input_30ock" aria-describedby="PolarisRadioButton2HelpText" value="managed_store"><span class="Polaris-RadioButton__Backdrop_1x2i2"></span><span class="Polaris-RadioButton__Icon_yj27d"></span></span></span><span class="Polaris-Choice__Label_2vd36">Managed store</span></label>
+                                                                                        <div class="Polaris-Choice__Descriptions_pp5ln">
+                                                                                            <div class="Polaris-Choice__HelpText_8qj1a" id="PolarisRadioButton2HelpText"><span>Access an existing Shopify store by requesting a collaborator account to provide client services or support for your apps. You can add up to 500 pending requests at a time.</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <form action="" method="post" name="store-signup-form"><input type="hidden" name="signup_types[]"><input type="hidden" name="signup_source"><input type="hidden" name="extra[affiliate_shop]"><input type="hidden" name="extra[organization_id]" value="2427429">
+                                                        <div class="-c-VL">
+                                                            <hr class="Ac+fK">
+                                                        </div>
+                                                        <div class="Polaris-Layout__AnnotatedSection_1nyfl">
+                                                            <div class="Polaris-Layout__AnnotationWrapper_xpmgu">
+                                                                <div class="Polaris-Layout__Annotation_1a51c">
+                                                                    <div class="Polaris-TextContainer_szg8b">
+                                                                        <h2 class="Polaris-Heading_1brcv">Login information</h2>
+                                                                        <div class="Polaris-Layout__AnnotationDescription_1fsez">
+                                                                            <p>Give your store a name and enter the password you want to use to log in to the store directly. You'll use your business email address to log in: vietdz124x@gmail.com.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Polaris-Layout__AnnotationContent_36su2">
+                                                                    <div class="Polaris-Card_yis1o">
+                                                                        <div class="Polaris-Card__Section_1b1h1">
+                                                                            <div class="Polaris-FormLayout_1wntl">
+                                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                                    <div class="">
+                                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField11Label" for="PolarisTextField11" class="Polaris-Label__Text_yj3uv">Store name</label></div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Connected_wopc9">
+                                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                                <div class="Polaris-TextField_1spwi"><input name="signup[shop_name]" id="PolarisTextField11" class="Polaris-TextField__Input_30ock" aria-labelledby="PolarisTextField11Label" aria-invalid="false"
+                                                                                                        value="">
+                                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                                    <div class="">
+                                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField12Label" for="PolarisTextField12" class="Polaris-Label__Text_yj3uv">Store URL</label></div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Connected_wopc9">
+                                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                                <div class="Polaris-TextField_1spwi Polaris-TextField--readOnly_vi6ia"><input name="storeDomain" id="PolarisTextField12" readonly="" class="Polaris-TextField__Input_30ock Polaris-TextField__Input--suffixed_1tsyu" aria-labelledby="PolarisTextField12Label PolarisTextField12Suffix"
+                                                                                                        aria-invalid="false" value="">
+                                                                                                    <div class="Polaris-TextField__Suffix_10fbu" id="PolarisTextField12Suffix"><span>.myshopify.com</span></div>
+                                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                                    <div class="">
+                                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField13Label" for="PolarisTextField13" class="Polaris-Label__Text_yj3uv">Login</label></div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Connected_wopc9">
+                                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                                <div class="Polaris-TextField_1spwi Polaris-TextField--hasValue_1mx8d Polaris-TextField--readOnly_vi6ia"><input name="signup[email]" id="PolarisTextField13" readonly="" class="Polaris-TextField__Input_30ock" aria-describedby="PolarisTextField13HelpText" aria-labelledby="PolarisTextField13Label"
+                                                                                                        aria-invalid="false" value="">
+                                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Labelled__HelpText_8qj1a" id="PolarisTextField13HelpText"><span>We'll use this address if we need to contact you about your account.</span></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                                    <div class="">
+                                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField14Label" for="PolarisTextField14" class="Polaris-Label__Text_yj3uv">Password</label></div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Connected_wopc9">
+                                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                                <div class="Polaris-TextField_1spwi"><input name="signup[password]" id="PolarisTextField14" class="Polaris-TextField__Input_30ock" type="password" aria-labelledby="PolarisTextField14Label" aria-invalid="false"
+                                                                                                        value="">
+                                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                                    <div class="">
+                                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField15Label" for="PolarisTextField15" class="Polaris-Label__Text_yj3uv">Confirm password</label></div>
+                                                                                        </div>
+                                                                                        <div class="Polaris-Connected_wopc9">
+                                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                                <div class="Polaris-TextField_1spwi"><input name="signup[confirm_password]" id="PolarisTextField15" class="Polaris-TextField__Input_30ock" type="password" aria-labelledby="PolarisTextField15Label"
+                                                                                                        aria-invalid="false" value="">
+                                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Polaris-Layout__AnnotatedSection_1nyfl">
+                                                            <div class="Polaris-Layout__AnnotationWrapper_xpmgu">
+                                                                <div class="Polaris-Layout__Annotation_1a51c">
+                                                                    <div class="Polaris-TextContainer_szg8b">
+                                                                        <h2 class="Polaris-Heading_1brcv">
+                                                                            <div class="Polaris-Stack_32wu2">
+                                                                                <div class="Polaris-Stack__Item_yiyol">
+                                                                                    <h2 class="Polaris-Heading_1brcv">Developer preview</h2>
+                                                                                </div>
+                                                                                <div class="Polaris-Stack__Item_yiyol"><span class="Polaris-Badge_2qgie Polaris-Badge--statusNew_cj8gz"><span class="Polaris-VisuallyHidden_yrtt5">New </span>New</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </h2>
+                                                                        <div class="Polaris-Layout__AnnotationDescription_1fsez">Add a developer preview to this store to test unreleased features and updates to the Shopify admin. <a target="_blank" class="Polaris-Link_yj5sy" href="#"
+                                                                                rel="noopener noreferrer" data-polaris-unstyled="true">Learn more about developer previews<span class="Polaris-Link__IconLockup_i2iua"><span class="Polaris-Link__IconLayout_1wnv2"><span class="Polaris-Icon_yj27d" aria-label="(opens a new window)"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M14 13v1a1 1 0 0 1-1 1H6c-.575 0-1-.484-1-1V7a1 1 0 0 1 1-1h1c1.037 0 1.04 1.5 0 1.5-.178.005-.353 0-.5 0v6h6V13c0-1 1.5-1 1.5 0zm-3.75-7.25A.75.75 0 0 1 11 5h4v4a.75.75 0 0 1-1.5 0V7.56l-3.22 3.22a.75.75 0 1 1-1.06-1.06l3.22-3.22H11a.75.75 0 0 1-.75-.75z"></path></svg></span></span></span></a>.</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Polaris-Layout__AnnotationContent_36su2">
+                                                                    <div class="Polaris-Card_yis1o"><span aria-busy="false"><div class="Polaris-Card__Section_1b1h1"><div class="Polaris-Stack_32wu2 Polaris-Stack--vertical_uiuuj"><div class="Polaris-Stack__Item_yiyol"><label class="Polaris-Choice_j5gzq" for="DeveloperPreviewEnableCheckbox"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-Checkbox_1d6zr"><input id="DeveloperPreviewEnableCheckbox" name="signup[developer_preview]" type="checkbox" class="Polaris-Checkbox__Input_30ock" aria-invalid="false" role="checkbox" aria-checked="false" value=""><span class="Polaris-Checkbox__Backdrop_1x2i2"></span>
+                                                                        <span class="Polaris-Checkbox__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M8.315 13.859l-3.182-3.417a.506.506 0 0 1 0-.684l.643-.683a.437.437 0 0 1 .642 0l2.22 2.393 4.942-5.327a.436.436 0 0 1 .643 0l.643.684a.504.504 0 0 1 0 .683l-5.91 6.35a.437.437 0 0 1-.642 0"></path></svg></span></span>
+                                                                        </span>
+                                                                        </span><span class="Polaris-Choice__Label_2vd36">Create store with transfer disabled to use a developer preview</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div><input type="hidden" name="extra[partner_test_shop]"></span>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-Layout__AnnotatedSection_1nyfl">
+                                            <div class="Polaris-Layout__AnnotationWrapper_xpmgu">
+                                                <div class="Polaris-Layout__Annotation_1a51c">
+                                                    <div class="Polaris-TextContainer_szg8b">
+                                                        <h2 class="Polaris-Heading_1brcv">Store address</h2>
+                                                        <div class="Polaris-Layout__AnnotationDescription_1fsez">
+                                                            <p>Let us know where your store is located.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-Layout__AnnotationContent_36su2">
+                                                    <div class="Polaris-Card_yis1o">
+                                                        <div class="Polaris-Card__Section_1b1h1">
+                                                            <div class="Polaris-FormLayout_1wntl">
+                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                    <div class="">
+                                                                        <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                            <div class="Polaris-Label_2vd36"><label id="PolarisTextField16Label" for="PolarisTextField16" class="Polaris-Label__Text_yj3uv">Address</label></div>
+                                                                        </div>
+                                                                        <div class="Polaris-Connected_wopc9">
+                                                                            <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                <div class="Polaris-TextField_1spwi Polaris-TextField--hasValue_1mx8d"><input name="signup[address1]" id="PolarisTextField16" class="Polaris-TextField__Input_30ock" aria-labelledby="PolarisTextField16Label" aria-invalid="false" value="">
+                                                                                    <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div role="group" class="Polaris-FormLayout--grouped_17srt">
+                                                                    <div class="Polaris-FormLayout__Items_38lvu">
+                                                                        <div class="Polaris-FormLayout__Item_yiyol">
+                                                                            <div class="">
+                                                                                <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                    <div class="Polaris-Label_2vd36"><label id="PolarisTextField17Label" for="PolarisTextField17" class="Polaris-Label__Text_yj3uv">City</label></div>
+                                                                                </div>
+                                                                                <div class="Polaris-Connected_wopc9">
+                                                                                    <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                        <div class="Polaris-TextField_1spwi Polaris-TextField--hasValue_1mx8d"><input name="signup[city]" id="PolarisTextField17" class="Polaris-TextField__Input_30ock" aria-labelledby="PolarisTextField17Label" aria-invalid="false" value="">
+                                                                                            <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="Polaris-FormLayout__Item_yiyol">
+                                                                            <div class="">
+                                                                                <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                    <div class="Polaris-Label_2vd36"><label id="PolarisTextField18Label" for="PolarisTextField18" class="Polaris-Label__Text_yj3uv">Postal / ZIP code</label></div>
+                                                                                </div>
+                                                                                <div class="Polaris-Connected_wopc9">
+                                                                                    <div class="Polaris-Connected__Item_yiyol Polaris-Connected__Item--primary_rmh5m">
+                                                                                        <div class="Polaris-TextField_1spwi Polaris-TextField--hasValue_1mx8d"><input name="signup[zip]" id="PolarisTextField18" class="Polaris-TextField__Input_30ock" aria-labelledby="PolarisTextField18Label" aria-invalid="false" value="">
+                                                                                            <div class="Polaris-TextField__Backdrop_1x2i2"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                    <div class="Polaris-Stack_32wu2 Polaris-Stack--distributionFill_1c1lq">
+                                                                        <div class="Polaris-Stack__Item_yiyol">
+                                                                            <div class="">
+                                                                                <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                    <div class="Polaris-Label_2vd36"><label id="PolarisSelect3Label" for="PolarisSelect3" class="Polaris-Label__Text_yj3uv">Country</label></div>
+                                                                                </div>
+                                                                                <div class="Polaris-Select_ss8pm"><select id="PolarisSelect3" name="signup[country]" class="Polaris-Select__Input_30ock" aria-invalid="false"><option value="AF">Afghanistan</option><option value="AX">Åland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AG">Antigua &amp; Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AC">Ascension Island</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia &amp; Herzegovina</option><option value="BW">Botswana</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="BQ">Caribbean Netherlands</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo - Brazzaville</option><option value="CD">Congo - Kinshasa</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CW">Curaçao</option><option value="CY">Cyprus</option><option value="CZ">Czechia</option><option value="CI">Côte d’Ivoire</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="SZ">Eswatini</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HN">Honduras</option><option value="HK">Hong Kong SAR</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="XK">Kosovo</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao SAR</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar (Burma)</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MK">North Macedonia</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territories</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn Islands</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="QA">Qatar</option><option value="RE">Réunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">São Tomé &amp; Príncipe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SX">Sint Maarten</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia &amp; South Sandwich Islands</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="BL">St. Barthélemy</option><option value="SH">St. Helena</option><option value="KN">St. Kitts &amp; Nevis</option><option value="LC">St. Lucia</option><option value="MF">St. Martin</option><option value="PM">St. Pierre &amp; Miquelon</option><option value="VC">St. Vincent &amp; Grenadines</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard &amp; Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad &amp; Tobago</option><option value="TA">Tristan da Cunha</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks &amp; Caicos Islands</option><option value="TV">Tuvalu</option><option value="UM">U.S. Outlying Islands</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican City</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="WF">Wallis &amp; Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select>
+                                                                                    <div class="Polaris-Select__Content_xd1mk" aria-hidden="true"><span class="Polaris-Select__SelectedOption_azu52">Vietnam</span><span class="Polaris-Select__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M10 16l-4-4h8l-4 4zm0-12l4 4H6l4-4z"></path></svg></span></span>
+                                                                                    </div>
+                                                                                    <div class="Polaris-Select__Backdrop_1x2i2"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="Polaris-Stack__Item_yiyol">
+                                                                            <div class="">
+                                                                                <div class="Polaris-Labelled__LabelWrapper_bf6ys">
+                                                                                    <div class="Polaris-Label_2vd36"><label id="PolarisSelect4Label" for="PolarisSelect4" class="Polaris-Label__Text_yj3uv">Region</label></div>
+                                                                                </div>
+                                                                                <div class="Polaris-Select_ss8pm Polaris-Select--disabled_hcuh9"><select id="PolarisSelect4" name="signup[province]" class="Polaris-Select__Input_30ock" disabled="" aria-invalid="false"></select>
+                                                                                    <div class="Polaris-Select__Content_xd1mk" aria-hidden="true" aria-disabled="true"><span class="Polaris-Select__SelectedOption_azu52"></span><span class="Polaris-Select__Icon_yj27d"><span class="Polaris-Icon_yj27d"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M10 16l-4-4h8l-4 4zm0-12l4 4H6l4-4z"></path></svg></span></span>
+                                                                                    </div>
+                                                                                    <div class="Polaris-Select__Backdrop_1x2i2"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-Layout__AnnotatedSection_1nyfl">
+                                            <div class="Polaris-Layout__AnnotationWrapper_xpmgu">
+                                                <div class="Polaris-Layout__Annotation_1a51c">
+                                                    <div class="Polaris-TextContainer_szg8b">
+                                                        <h2 class="Polaris-Heading_1brcv">Store purpose</h2>
+                                                        <div class="Polaris-Layout__AnnotationDescription_1fsez">
+                                                            <p>Tell us how you plan to use your store, so we can give you better recommendations.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-Layout__AnnotationContent_36su2">
+                                                    <div class="Polaris-Card_yis1o">
+                                                        <div class="Polaris-Card__Section_1b1h1">
+                                                            <div class="Polaris-FormLayout_1wntl">
+                                                                <div class="Polaris-FormLayout__Item_yiyol">
+                                                                    <fieldset class="Polaris-ChoiceList_ygfuw" id="signup_source_details" aria-invalid="false">
+                                                                        <legend class="Polaris-ChoiceList__Title_2qj8j">What will you do with this development store?</legend>
+                                                                        <ul class="Polaris-ChoiceList__Choices_15o76">
+                                                                            <li><label class="Polaris-Choice_j5gzq" for="PolarisRadioButton6"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-RadioButton_bsatr"><input id="PolarisRadioButton6" name="signup_source_details" type="radio" class="Polaris-RadioButton__Input_30ock" value="build_store_for_client"><span class="Polaris-RadioButton__Backdrop_1x2i2"></span><span class="Polaris-RadioButton__Icon_yj27d"></span></span></span><span class="Polaris-Choice__Label_2vd36">Build a new store for a client</span></label></li>
+                                                                            <li><label class="Polaris-Choice_j5gzq" for="PolarisRadioButton7"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-RadioButton_bsatr"><input id="PolarisRadioButton7" name="signup_source_details" type="radio" class="Polaris-RadioButton__Input_30ock" value="test_app_or_theme"><span class="Polaris-RadioButton__Backdrop_1x2i2"></span><span class="Polaris-RadioButton__Icon_yj27d"></span></span></span><span class="Polaris-Choice__Label_2vd36">Test an app or theme</span></label></li>
+                                                                            <li><label class="Polaris-Choice_j5gzq" for="PolarisRadioButton8"><span class="Polaris-Choice__Control_1u8vs"><span class="Polaris-RadioButton_bsatr"><input id="PolarisRadioButton8" name="signup_source_details" type="radio" class="Polaris-RadioButton__Input_30ock" value="playing_around"><span class="Polaris-RadioButton__Backdrop_1x2i2"></span><span class="Polaris-RadioButton__Icon_yj27d"></span></span></span><span class="Polaris-Choice__Label_2vd36">I'm just playing around</span></label></li>
+                                                                        </ul>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><span class="Polaris-VisuallyHidden_yrtt5"><button type="submit" aria-hidden="true" tabindex="-1">Submit</button></span></form>
+                                    </div>
+                                    <div class="wdSlz ldEaW" style="--multiplier:1;">
+                                        <div class="Polaris-PageActions_fcnua">
+                                            <div class="Polaris-Stack_32wu2 Polaris-Stack--spacingTight_1o4d6 Polaris-Stack--distributionEqualSpacing_x9cqm">
+                                                <div class="Polaris-Stack__Item_yiyol">
+                                                    <div class="Polaris-ButtonGroup_yy85z">
+                                                        <div class="Polaris-ButtonGroup__Item_yiyol"><a class="Polaris-Button_r99lw" href="" data-polaris-unstyled="true"><span class="Polaris-Button__Content_xd1mk"><span class="Polaris-Button__Text_yj3uv">Cancel</span></span></a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-Stack__Item_yiyol"><button class="Polaris-Button_r99lw Polaris-Button--primary_7k9zs" type="button"><span class="Polaris-Button__Content_xd1mk"><span class="Polaris-Button__Text_yj3uv">Save</span></span></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    </main>
+                </div>
+        </div>
+        <div id="PolarisPortalsContainer">
+            <div data-portal-id="popover-Polarisportal1"></div>
+            <div data-portal-id="popover-Polarisportal2"></div>
+        </div>
+    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script> -->
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>
